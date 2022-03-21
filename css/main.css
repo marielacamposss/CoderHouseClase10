@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darksalmon;
+}
+
+.homeFlex {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 span {
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.homeMain p {
+  text-align: center;
+}
+
+.homeMain div {
+  display: flex;
+  justify-content: center;
+}
+.headerSobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerSobre nav ul li {
+  display: inline-block;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 1rem;
+}
+
+.mainSobre {
+  display: grid;
+  grid-template-areas:
+    "pMain pMain img img"
+    "section section section section"
+    "p p p p";
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.pMain {
+  grid-area: pMain;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.pMain img {
+  grid-area: img;
+}
+.section {
+  grid-area: section;
+  padding: 2rem;
+}
+.p {
+  grid-area: p;
+}
+
+.footerSobre {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 834px) and (min-width: 415px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .mainSobre .img {
+    display: none;
+  }
+  .mainSobre {
+    grid-template-areas:
+      "pMain pMain"
+      "imgUno imgDos"
+      "imgTres" "imgCuatro"
+      "p p p p";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+section .imgUno {
+  grid-area: imgUno;
+}
+
+section .imgDos {
+  grid-area: imgDos;
+}
+
+section .imgTres {
+  grid-area: imgTres;
+}
+
+section .imgCuatro {
+  grid-area: imgCuatro;
+}
